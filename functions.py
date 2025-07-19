@@ -54,8 +54,8 @@ def all_int(numbers):
 
 print("___________________________________________________")
 
-def is_integers(lst):
-    for item in lst:
+def is_integers(num):
+    for item in num:
         if type(item) != int:
             return False
     return True
@@ -70,7 +70,7 @@ def is_fibo(n):
 
 def find_fibo(num):
     result = []
-    for num in lst:
+    for num in num:
         if is_fibo(num):
             result.append(num)
     return result
