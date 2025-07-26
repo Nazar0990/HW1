@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Вибір плану підписки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #e2e2e2;
+            padding: 40px 10px;
+            border-radius: 10px;
+        }
+        .plans {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+        .plan {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+            text-align: center;
+            padding: 32px 28px 24px 28px;
+            width: 220px;
+            transition: 
+                transform 1s cubic-bezier(0.23, 1, 0.32, 1), 
+                box-shadow 0.35s, 
+                width 1s, 
+                height 1s;
+            border-top: 3px solid transparent;
+            margin-bottom: 0;
+            position: relative;
+        }
+        .plan.enterprise      { border-top-color: #cc5967; }
+        .plan.professional    { border-top-color: #e29d3c; }
+        .plan.standart        { border-top-color: #2366a2; }
+        .plan.basic           { border-top-color: #6bc36b; }
+        .plan .price {
+            font-size: 38px;
+            color: #333;
+            font-weight: bold;
+        }
+        .plan .period {
+            color: #888;
+        }
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 30px 0;
+        }
+        .plan ul li {
+            margin-bottom: 4px;
+            font-size: 15px;
+        }
+        .plan .buy-btn {
+            width: 76px;
+            padding: 9px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            background: #eef0f3;
+            color: #222;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .plan.enterprise .buy-btn   { background: #cc5967; color: #fff; }
+        .plan.professional .buy-btn { background: #e29d3c; color: #fff; }
+        .plan.standart .buy-btn     { background: #2366a2; color: #fff; }
+        .plan.basic .buy-btn        { background: #6bc36b; color: #fff; }
+
+        /* Hover effect for scaling */
+        .plan:hover {
+            transform: scale(1.13);
+            z-index: 20;
+            box-shadow: 0 6px 30px 0 rgba(0,0,0,0.20);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="plans">
+            <div class="plan enterprise">
+                <h3>ENTERPRISE</h3>
+                <div class="price">$69</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>10GB disk space</li>
+                    <li>100GB monthly bandwidth</li>
+                    <li>20 email accounts</li>
+                    <li>Unlimited subdomains</li>
+                </ul>
+                <button class="buy-btn">BUY</button>
+            </div>
+            <div class="plan professional">
+                <h3>PROFESSIONAL</h3>
+                <div class="price">$29</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>5GB disk space</li>
+                    <li>60GB monthly bandwidth</li>
+                    <li>10 email accounts</li>
+                    <li>Unlimited subdomains</li>
+                </ul>
+                <button class="buy-btn">BUY</button>
+            </div>
+            <div class="plan standart">
+                <h3>STANDART</h3>
+                <div class="price">$19</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>3GB disk space</li>
+                    <li>30GB monthly bandwidth</li>
+                    <li>5 email accounts</li>
+                    <li>Unlimited subdomains</li>
+                </ul>
+                <button class="buy-btn">BUY</button>
+            </div>
+            <div class="plan basic">
+                <h3>BASIC</h3>
+                <div class="price">$9</div>
+                <div class="period">per month</div>
+                <ul>
+                    <li>1GB disk space</li>
+                    <li>10GB monthly bandwidth</li>
+                    <li>2 email accounts</li>
+                    <li>Unlimited subdomains</li>
+                </ul>
+                <button class="buy-btn">BUY</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
